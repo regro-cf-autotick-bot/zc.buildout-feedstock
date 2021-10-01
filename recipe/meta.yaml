@@ -1,16 +1,16 @@
 {% set name = "zc.buildout" %}
-{% set version = "2.13.3" %}
+{% set version = "2.13.4" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  git_rev: {{ version }}
-  git_url: https://github.com/buildout/buildout.git
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: b978b2f9317b317ee4191f78fcc4f05b1ac41bdaaae47f0956f14c8285feef63
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - buildout=zc.buildout.buildout:main
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -28,8 +28,6 @@ test:
   imports:
     - zc
     - zc.buildout
-  commands:
-    - buildout --help
 
 about:
   home: "http://buildout.org"
