@@ -10,7 +10,7 @@ source:
   sha256: b978b2f9317b317ee4191f78fcc4f05b1ac41bdaaae47f0956f14c8285feef63
 
 build:
-  number: 1
+  number: 2
   entry_points:
     - buildout=zc.buildout.buildout:main
   script: "{{ PYTHON }} -m pip install . -vv"
@@ -19,15 +19,17 @@ requirements:
   host:
     - pip
     - python
-    - setuptools >=8.0
+    - setuptools >=8.0,<52
   run:
     - python
-    - setuptools >=8.0
+    - setuptools >=8.0,<52
 
 test:
   imports:
     - zc
     - zc.buildout
+  commands:
+    - buildout --help
 
 about:
   home: "http://buildout.org"
