@@ -1,19 +1,19 @@
 {% set name = "zc.buildout" %}
-{% set version = "2.13.4" %}
+{% set version = "2.13.5" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: b978b2f9317b317ee4191f78fcc4f05b1ac41bdaaae47f0956f14c8285feef63
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 422724f6ec8eeea5ee3527a33d5b90fc1dc3a29f68a42e2119785d5ac516d4b8
 
 build:
-  number: 2
+  number: 0
   entry_points:
     - buildout=zc.buildout.buildout:main
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,11 +32,11 @@ test:
     - buildout --help
 
 about:
-  home: "http://buildout.org"
+  home: http://buildout.org
   license: ZPL-2.1
   license_family: OTHER
   license_file: LICENSE.txt
-  summary: "System for managing development buildouts"
+  summary: System for managing development buildouts
   doc_url: http://www.buildout.org/en/latest/
   dev_url: https://github.com/buildout/buildout
 
