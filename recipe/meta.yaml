@@ -10,7 +10,7 @@ source:
   sha256: ac6edd48b1d7b1fba383dd0840fd49c53266f6bd426111a0195bcc640f4aff0f
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - buildout=zc.buildout.buildout:main
   script: {{ PYTHON }} -m pip install . -vv
