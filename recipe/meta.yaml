@@ -19,7 +19,7 @@ requirements:
   host:
     - pip
     - python
-    - setuptools >=8.0,<52
+    - setuptools
   run:
     - python
     - setuptools >=8.0,<52
