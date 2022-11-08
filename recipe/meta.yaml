@@ -1,5 +1,5 @@
 {% set name = "zc.buildout" %}
-{% set version = "2.13.7" %}
+{% set version = "3.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e12fe3adf2e60f52da98c8db4630688b94cb1aad466b2c6a4a6e0fe40ea8f94a
+  sha256: 0c8c6eae36de8ed8227d528dc4cfddb0545978348c9eef0890739486fe954b2b
 
 build:
   number: 0
