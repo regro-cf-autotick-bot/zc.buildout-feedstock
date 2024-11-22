@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e12fe3adf2e60f52da98c8db4630688b94cb1aad466b2c6a4a6e0fe40ea8f94a
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - buildout=zc.buildout.buildout:main
   script: {{ PYTHON }} -m pip install . -vv
